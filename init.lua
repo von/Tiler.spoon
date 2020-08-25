@@ -9,7 +9,7 @@ local Tiler = {}
 
 -- Metadata
 Tiler.name="Tiler"
-Tiler.version="0.1"
+Tiler.version="0.2"
 Tiler.author="Von Welch (von@vwelch.com)"
 -- https://opensource.org/licenses/Apache-2.0
 Tiler.license="Apache-2.0"
@@ -115,14 +115,10 @@ end
 ---  * Tiler object
 
 function Tiler:bindHotKeys(table)
-  for feature,mapping in pairs(table) do
-    if feature == "chooser" then
-      hs.hotkey.bind(mapping[1], mapping[2], function() self:chooser() end)
-    else
-      self.log.wf("Unrecognized key binding feature '%s'", feature)
-    end
-   end
-  return self
+  local spec = {
+    chooser = hs.fnutils.partial(self.chooser, self)
+  }
+  hs.spoons.bindHotkeysToSpec(spec, mapping)
 end
 
 --- chooser
