@@ -105,7 +105,7 @@ end
 --- tables containing modifiers and keynames/keycodes. E.g.
 ---   {
 ---     chooser = {{"cmd", "alt"}, "f"}
---    }
+---    }
 ---
 ---
 --- Parameters:
@@ -121,7 +121,7 @@ function Tiler:bindHotKeys(table)
   hs.spoons.bindHotkeysToSpec(spec, mapping)
 end
 
---- chooser
+--- Tiler:chooser
 --- Method
 --- Bring up a hs.chooser with a list of windows. Tile the chosen window to the right
 --- of the currently focused window.
