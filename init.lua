@@ -16,7 +16,7 @@ Tiler.license="Apache-2.0"
 Tiler.homepage="https://github.com/von/Tiled.spoon"
 
 --- Tiler:debug(enable)
---- Method
+--- Function
 --- Enable or disable debugging
 ---
 --- Parameters:
@@ -38,13 +38,8 @@ end
 -- Spoon methods/variables/constants/etc. should use camelCase
 
 --- Tiler:init()
---- Method
+--- Function
 --- Initializes a Tiler
---- When a user calls hs.loadSpoon(), Hammerspoon will load and execute init.lua
---- from the relevant s.
---- Do generally not perform any work, map any hotkeys, start any timers/watchers/etc.
---- in the main scope of your init.lua. Instead, it should simply prepare an object
---- with methods to be used later, then return the object.
 ---
 --- Parameters:
 ---  * None
@@ -65,13 +60,8 @@ function Tiler:init()
   return self
 end
 
---start() and stop()
---If your Spoon provides some kind of background activity, e.g. timers, watchers,
---spotlight searches, etc. you should generally activate them in a :start()
---method, and de-activate them in a :stop() method
-
 --- Tiler:start()
---- Method
+--- Function
 --- Start background activity.
 ---
 --- Parameters:
@@ -85,7 +75,7 @@ function Tiler:start()
 end
 
 --- Tiler:stop()
---- Method
+--- Function
 --- Stop background activity.
 ---
 --- Parameters:
@@ -99,7 +89,7 @@ function Tiler:stop()
 end
 
 --- Tiler:bindHotKeys(table)
---- Method
+--- Function
 --- The method accepts a single parameter, which is a table. The keys of the table
 --- are strings that describe the action performed, and the values of the table are
 --- tables containing modifiers and keynames/keycodes. E.g.
@@ -122,7 +112,7 @@ function Tiler:bindHotKeys(table)
 end
 
 --- Tiler:chooser
---- Method
+--- Function
 --- Bring up a hs.chooser with a list of windows. Tile the chosen window to the right
 --- of the currently focused window.
 ---
