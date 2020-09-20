@@ -1,327 +1,201 @@
 [
   {
-    "Constant" : [
-
-    ],
-    "submodules" : [
-
-    ],
-    "Function" : [
-
-    ],
-    "Variable" : [
-
-    ],
-    "stripped_doc" : [
-
-    ],
-    "type" : "Module",
-    "desc" : "Allows choosing a second window to tile next to the focused window.",
-    "Deprecated" : [
-
-    ],
-    "Constructor" : [
-
-    ],
-    "items" : [
+    "Command": [],
+    "Constant": [],
+    "Constructor": [],
+    "Deprecated": [],
+    "Field": [],
+    "Function": [
       {
-        "name" : "bindHotKeys",
-        "stripped_doc" : [
-          "The method accepts a single parameter, which is a table. The keys of the table",
-          "are strings that describe the action performed, and the values of the table are",
-          "tables containing modifiers and keynames\/keycodes. E.g.",
-          "  {",
-          "    chooser = {{\"cmd\", \"alt\"}, \"f\"}",
-          "   }",
-          "",
-          ""
+        "def": "Tiler:bindHotKeys(table)",
+        "desc": "The method accepts a single parameter, which is a table. The keys of the table",
+        "doc": "The method accepts a single parameter, which is a table. The keys of the table\nare strings that describe the action performed, and the values of the table are\ntables containing modifiers and keynames/keycodes. E.g.\n  {\n    chooser = {{\"cmd\", \"alt\"}, \"f\"}\n   }\n\n\nParameters:\n * table - Table of action to key mappings\n\nReturns:\n * Tiler object",
+        "name": "bindHotKeys",
+        "parameters": [
+          " * table - Table of action to key mappings"
         ],
-        "parameters" : [
-          " * table - Table of action to key mappings",
-          ""
-        ],
-        "doc" : "The method accepts a single parameter, which is a table. The keys of the table\nare strings that describe the action performed, and the values of the table are\ntables containing modifiers and keynames\/keycodes. E.g.\n  {\n    chooser = {{\"cmd\", \"alt\"}, \"f\"}\n   }\n\n\nParameters:\n * table - Table of action to key mappings\n\nReturns:\n * Tiler object",
-        "notes" : [
-
-        ],
-        "signature" : "Tiler:bindHotKeys(table)",
-        "type" : "Method",
-        "returns" : [
+        "returns": [
           " * Tiler object"
         ],
-        "def" : "Tiler:bindHotKeys(table)",
-        "desc" : "The method accepts a single parameter, which is a table. The keys of the table"
+        "signature": "Tiler:bindHotKeys(table)",
+        "stripped_doc": "are strings that describe the action performed, and the values of the table are\ntables containing modifiers and keynames/keycodes. E.g.\n  {\n    chooser = {{\"cmd\", \"alt\"}, \"f\"}\n   }",
+        "type": "Function"
       },
       {
-        "name" : "chooser",
-        "stripped_doc" : [
-          "Bring up a hs.chooser with a list of windows. Tile the chosen window to the right",
-          "of the currently focused window.",
-          ""
+        "def": "Tiler:chooser",
+        "desc": "Bring up a hs.chooser with a list of windows. Tile the chosen window to the right",
+        "doc": "Bring up a hs.chooser with a list of windows. Tile the chosen window to the right\nof the currently focused window.\n\nParameters:\n* None\n\nReturns:\n* Nothing",
+        "name": "chooser",
+        "parameters": [
+          "* None"
         ],
-        "parameters" : [
-          "* None",
-          ""
-        ],
-        "doc" : "Bring up a hs.chooser with a list of windows. Tile the chosen window to the right\nof the currently focused window.\n\nParameters:\n* None\n\nReturns:\n* Nothing",
-        "notes" : [
-
-        ],
-        "signature" : "Tiler:chooser",
-        "type" : "Method",
-        "returns" : [
+        "returns": [
           "* Nothing"
         ],
-        "def" : "Tiler:chooser",
-        "desc" : "Bring up a hs.chooser with a list of windows. Tile the chosen window to the right"
+        "signature": "Tiler:chooser",
+        "stripped_doc": "of the currently focused window.",
+        "type": "Function"
       },
       {
-        "name" : "debug",
-        "stripped_doc" : [
-          "Enable or disable debugging",
-          ""
+        "def": "Tiler:debug(enable)",
+        "desc": "Enable or disable debugging",
+        "doc": "Enable or disable debugging\n\nParameters:\n * enable - Boolean indicating whether debugging should be on\n\nReturns:\n * Nothing",
+        "name": "debug",
+        "parameters": [
+          " * enable - Boolean indicating whether debugging should be on"
         ],
-        "parameters" : [
-          " * enable - Boolean indicating whether debugging should be on",
-          ""
-        ],
-        "doc" : "Enable or disable debugging\n\nParameters:\n * enable - Boolean indicating whether debugging should be on\n\nReturns:\n * Nothing",
-        "notes" : [
-
-        ],
-        "signature" : "Tiler:debug(enable)",
-        "type" : "Method",
-        "returns" : [
+        "returns": [
           " * Nothing"
         ],
-        "def" : "Tiler:debug(enable)",
-        "desc" : "Enable or disable debugging"
+        "signature": "Tiler:debug(enable)",
+        "stripped_doc": "",
+        "type": "Function"
       },
       {
-        "name" : "init",
-        "stripped_doc" : [
-          "Initializes a Tiler",
-          "When a user calls hs.loadSpoon(), Hammerspoon will load and execute init.lua",
-          "from the relevant s.",
-          "Do generally not perform any work, map any hotkeys, start any timers\/watchers\/etc.",
-          "in the main scope of your init.lua. Instead, it should simply prepare an object",
-          "with methods to be used later, then return the object.",
-          ""
+        "def": "Tiler:init()",
+        "desc": "Initializes a Tiler",
+        "doc": "Initializes a Tiler\n\nParameters:\n * None\n\nReturns:\n * Tiler object",
+        "name": "init",
+        "parameters": [
+          " * None"
         ],
-        "parameters" : [
-          " * None",
-          ""
-        ],
-        "doc" : "Initializes a Tiler\nWhen a user calls hs.loadSpoon(), Hammerspoon will load and execute init.lua\nfrom the relevant s.\nDo generally not perform any work, map any hotkeys, start any timers\/watchers\/etc.\nin the main scope of your init.lua. Instead, it should simply prepare an object\nwith methods to be used later, then return the object.\n\nParameters:\n * None\n\nReturns:\n * Tiler object",
-        "notes" : [
-
-        ],
-        "signature" : "Tiler:init()",
-        "type" : "Method",
-        "returns" : [
+        "returns": [
           " * Tiler object"
         ],
-        "def" : "Tiler:init()",
-        "desc" : "Initializes a Tiler"
+        "signature": "Tiler:init()",
+        "stripped_doc": "",
+        "type": "Function"
       },
       {
-        "name" : "start",
-        "stripped_doc" : [
-          "Start background activity.",
-          ""
+        "def": "Tiler:start()",
+        "desc": "Start background activity.",
+        "doc": "Start background activity.\n\nParameters:\n * param - Some parameter\n\nReturns:\n * Tiler object",
+        "name": "start",
+        "parameters": [
+          " * param - Some parameter"
         ],
-        "parameters" : [
-          " * param - Some parameter",
-          ""
-        ],
-        "doc" : "Start background activity.\n\nParameters:\n * param - Some parameter\n\nReturns:\n * Tiler object",
-        "notes" : [
-
-        ],
-        "signature" : "Tiler:start()",
-        "type" : "Method",
-        "returns" : [
+        "returns": [
           " * Tiler object"
         ],
-        "def" : "Tiler:start()",
-        "desc" : "Start background activity."
+        "signature": "Tiler:start()",
+        "stripped_doc": "",
+        "type": "Function"
       },
       {
-        "name" : "stop",
-        "stripped_doc" : [
-          "Stop background activity.",
-          ""
+        "def": "Tiler:stop()",
+        "desc": "Stop background activity.",
+        "doc": "Stop background activity.\n\nParameters:\n * param - Some parameter\n\nReturns:\n * Tiler object",
+        "name": "stop",
+        "parameters": [
+          " * param - Some parameter"
         ],
-        "parameters" : [
-          " * param - Some parameter",
-          ""
-        ],
-        "doc" : "Stop background activity.\n\nParameters:\n * param - Some parameter\n\nReturns:\n * Tiler object",
-        "notes" : [
-
-        ],
-        "signature" : "Tiler:stop()",
-        "type" : "Method",
-        "returns" : [
+        "returns": [
           " * Tiler object"
         ],
-        "def" : "Tiler:stop()",
-        "desc" : "Stop background activity."
+        "signature": "Tiler:stop()",
+        "stripped_doc": "",
+        "type": "Function"
       }
     ],
-    "Method" : [
+    "Method": [],
+    "Variable": [],
+    "desc": "Allows choosing a second window to tile next to the focused window.",
+    "doc": "Allows choosing a second window to tile next to the focused window.\nTaken from @megalthic who apparently got if from @evantravers, who got it\nfrom @tmiller. Converted to a spoon by @von.",
+    "items": [
       {
-        "name" : "debug",
-        "stripped_doc" : [
-          "Enable or disable debugging",
-          ""
+        "def": "Tiler:bindHotKeys(table)",
+        "desc": "The method accepts a single parameter, which is a table. The keys of the table",
+        "doc": "The method accepts a single parameter, which is a table. The keys of the table\nare strings that describe the action performed, and the values of the table are\ntables containing modifiers and keynames/keycodes. E.g.\n  {\n    chooser = {{\"cmd\", \"alt\"}, \"f\"}\n   }\n\n\nParameters:\n * table - Table of action to key mappings\n\nReturns:\n * Tiler object",
+        "name": "bindHotKeys",
+        "parameters": [
+          " * table - Table of action to key mappings"
         ],
-        "parameters" : [
-          " * enable - Boolean indicating whether debugging should be on",
-          ""
-        ],
-        "doc" : "Enable or disable debugging\n\nParameters:\n * enable - Boolean indicating whether debugging should be on\n\nReturns:\n * Nothing",
-        "notes" : [
-
-        ],
-        "signature" : "Tiler:debug(enable)",
-        "type" : "Method",
-        "returns" : [
-          " * Nothing"
-        ],
-        "def" : "Tiler:debug(enable)",
-        "desc" : "Enable or disable debugging"
-      },
-      {
-        "name" : "init",
-        "stripped_doc" : [
-          "Initializes a Tiler",
-          "When a user calls hs.loadSpoon(), Hammerspoon will load and execute init.lua",
-          "from the relevant s.",
-          "Do generally not perform any work, map any hotkeys, start any timers\/watchers\/etc.",
-          "in the main scope of your init.lua. Instead, it should simply prepare an object",
-          "with methods to be used later, then return the object.",
-          ""
-        ],
-        "parameters" : [
-          " * None",
-          ""
-        ],
-        "doc" : "Initializes a Tiler\nWhen a user calls hs.loadSpoon(), Hammerspoon will load and execute init.lua\nfrom the relevant s.\nDo generally not perform any work, map any hotkeys, start any timers\/watchers\/etc.\nin the main scope of your init.lua. Instead, it should simply prepare an object\nwith methods to be used later, then return the object.\n\nParameters:\n * None\n\nReturns:\n * Tiler object",
-        "notes" : [
-
-        ],
-        "signature" : "Tiler:init()",
-        "type" : "Method",
-        "returns" : [
+        "returns": [
           " * Tiler object"
         ],
-        "def" : "Tiler:init()",
-        "desc" : "Initializes a Tiler"
+        "signature": "Tiler:bindHotKeys(table)",
+        "stripped_doc": "are strings that describe the action performed, and the values of the table are\ntables containing modifiers and keynames/keycodes. E.g.\n  {\n    chooser = {{\"cmd\", \"alt\"}, \"f\"}\n   }",
+        "type": "Function"
       },
       {
-        "name" : "start",
-        "stripped_doc" : [
-          "Start background activity.",
-          ""
+        "def": "Tiler:chooser",
+        "desc": "Bring up a hs.chooser with a list of windows. Tile the chosen window to the right",
+        "doc": "Bring up a hs.chooser with a list of windows. Tile the chosen window to the right\nof the currently focused window.\n\nParameters:\n* None\n\nReturns:\n* Nothing",
+        "name": "chooser",
+        "parameters": [
+          "* None"
         ],
-        "parameters" : [
-          " * param - Some parameter",
-          ""
-        ],
-        "doc" : "Start background activity.\n\nParameters:\n * param - Some parameter\n\nReturns:\n * Tiler object",
-        "notes" : [
-
-        ],
-        "signature" : "Tiler:start()",
-        "type" : "Method",
-        "returns" : [
-          " * Tiler object"
-        ],
-        "def" : "Tiler:start()",
-        "desc" : "Start background activity."
-      },
-      {
-        "name" : "stop",
-        "stripped_doc" : [
-          "Stop background activity.",
-          ""
-        ],
-        "parameters" : [
-          " * param - Some parameter",
-          ""
-        ],
-        "doc" : "Stop background activity.\n\nParameters:\n * param - Some parameter\n\nReturns:\n * Tiler object",
-        "notes" : [
-
-        ],
-        "signature" : "Tiler:stop()",
-        "type" : "Method",
-        "returns" : [
-          " * Tiler object"
-        ],
-        "def" : "Tiler:stop()",
-        "desc" : "Stop background activity."
-      },
-      {
-        "name" : "bindHotKeys",
-        "stripped_doc" : [
-          "The method accepts a single parameter, which is a table. The keys of the table",
-          "are strings that describe the action performed, and the values of the table are",
-          "tables containing modifiers and keynames\/keycodes. E.g.",
-          "  {",
-          "    chooser = {{\"cmd\", \"alt\"}, \"f\"}",
-          "   }",
-          "",
-          ""
-        ],
-        "parameters" : [
-          " * table - Table of action to key mappings",
-          ""
-        ],
-        "doc" : "The method accepts a single parameter, which is a table. The keys of the table\nare strings that describe the action performed, and the values of the table are\ntables containing modifiers and keynames\/keycodes. E.g.\n  {\n    chooser = {{\"cmd\", \"alt\"}, \"f\"}\n   }\n\n\nParameters:\n * table - Table of action to key mappings\n\nReturns:\n * Tiler object",
-        "notes" : [
-
-        ],
-        "signature" : "Tiler:bindHotKeys(table)",
-        "type" : "Method",
-        "returns" : [
-          " * Tiler object"
-        ],
-        "def" : "Tiler:bindHotKeys(table)",
-        "desc" : "The method accepts a single parameter, which is a table. The keys of the table"
-      },
-      {
-        "name" : "chooser",
-        "stripped_doc" : [
-          "Bring up a hs.chooser with a list of windows. Tile the chosen window to the right",
-          "of the currently focused window.",
-          ""
-        ],
-        "parameters" : [
-          "* None",
-          ""
-        ],
-        "doc" : "Bring up a hs.chooser with a list of windows. Tile the chosen window to the right\nof the currently focused window.\n\nParameters:\n* None\n\nReturns:\n* Nothing",
-        "notes" : [
-
-        ],
-        "signature" : "Tiler:chooser",
-        "type" : "Method",
-        "returns" : [
+        "returns": [
           "* Nothing"
         ],
-        "def" : "Tiler:chooser",
-        "desc" : "Bring up a hs.chooser with a list of windows. Tile the chosen window to the right"
+        "signature": "Tiler:chooser",
+        "stripped_doc": "of the currently focused window.",
+        "type": "Function"
+      },
+      {
+        "def": "Tiler:debug(enable)",
+        "desc": "Enable or disable debugging",
+        "doc": "Enable or disable debugging\n\nParameters:\n * enable - Boolean indicating whether debugging should be on\n\nReturns:\n * Nothing",
+        "name": "debug",
+        "parameters": [
+          " * enable - Boolean indicating whether debugging should be on"
+        ],
+        "returns": [
+          " * Nothing"
+        ],
+        "signature": "Tiler:debug(enable)",
+        "stripped_doc": "",
+        "type": "Function"
+      },
+      {
+        "def": "Tiler:init()",
+        "desc": "Initializes a Tiler",
+        "doc": "Initializes a Tiler\n\nParameters:\n * None\n\nReturns:\n * Tiler object",
+        "name": "init",
+        "parameters": [
+          " * None"
+        ],
+        "returns": [
+          " * Tiler object"
+        ],
+        "signature": "Tiler:init()",
+        "stripped_doc": "",
+        "type": "Function"
+      },
+      {
+        "def": "Tiler:start()",
+        "desc": "Start background activity.",
+        "doc": "Start background activity.\n\nParameters:\n * param - Some parameter\n\nReturns:\n * Tiler object",
+        "name": "start",
+        "parameters": [
+          " * param - Some parameter"
+        ],
+        "returns": [
+          " * Tiler object"
+        ],
+        "signature": "Tiler:start()",
+        "stripped_doc": "",
+        "type": "Function"
+      },
+      {
+        "def": "Tiler:stop()",
+        "desc": "Stop background activity.",
+        "doc": "Stop background activity.\n\nParameters:\n * param - Some parameter\n\nReturns:\n * Tiler object",
+        "name": "stop",
+        "parameters": [
+          " * param - Some parameter"
+        ],
+        "returns": [
+          " * Tiler object"
+        ],
+        "signature": "Tiler:stop()",
+        "stripped_doc": "",
+        "type": "Function"
       }
     ],
-    "Command" : [
-
-    ],
-    "Field" : [
-
-    ],
-    "doc" : "Side-by-side window tiling\nAllows choosing a second window to tile next to the focused window.\nTaken from @megalthic who apparently got if from @evantravers, who got it\nfrom @tmiller. Converted to a spoon by @von.",
-    "name" : "Tiler"
+    "name": "Tiler",
+    "stripped_doc": "Taken from @megalthic who apparently got if from @evantravers, who got it\nfrom @tmiller. Converted to a spoon by @von.",
+    "submodules": [],
+    "type": "Module"
   }
 ]

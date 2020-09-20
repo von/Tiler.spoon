@@ -1,0 +1,206 @@
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Hammerspoon docs: Tiler</title>
+    <style type="text/css">
+      a { text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      th { background-color: #DDDDDD; vertical-align: top; padding: 3px; }
+      td { width: 100%; background-color: #EEEEEE; vertical-align: top; padding: 3px; }
+      table { width: 100% ; border: 1px solid #0; text-align: left; }
+      section > table table td { width: 0; }
+    </style>
+    <link rel="stylesheet" href="docs.css" type="text/css" media="screen" />
+  </head>
+  <body>
+    <header>
+      <h1><a href="./index.html">docs</a> &raquo; Tiler</h1>
+      <p>Allows choosing a second window to tile next to the focused window.
+Taken from @megalthic who apparently got if from @evantravers, who got it
+from @tmiller. Converted to a spoon by @von.</p>
+
+      </header>
+      <h3>API Overview</h3>
+      <ul>
+        <li>Functions - API calls offered directly by the extension</li>
+          <ul>
+            <li><a href="#bindHotKeys">bindHotKeys</a></li>
+            <li><a href="#chooser">chooser</a></li>
+            <li><a href="#debug">debug</a></li>
+            <li><a href="#init">init</a></li>
+            <li><a href="#start">start</a></li>
+            <li><a href="#stop">stop</a></li>
+          </ul>
+      </ul>
+      <h3>API Documentation</h3>
+        <h4 class="documentation-section">Functions</h4>
+          <section id="bindHotKeys">
+            <a name="//apple_ref/cpp/Function/bindHotKeys" class="dashAnchor"></a>
+            <h5><a href="#bindHotKeys">bindHotKeys</a></h5>
+            <table>
+              <tr>
+                <th>Signature</th>
+                <td><code>Tiler:bindHotKeys(table)</code></td>
+              </tr>
+              <tr>
+                <th>Type</th>
+                <td>Function</td>
+              </tr>
+              <tr>
+                <th>Description</th>
+                <td><p>The method accepts a single parameter, which is a table. The keys of the table
+are strings that describe the action performed, and the values of the table are
+tables containing modifiers and keynames/keycodes. E.g.
+  {
+    chooser = {{"cmd", "alt"}, "f"}
+   }</p>
+<p>Parameters:</p>
+<ul>
+<li>table - Table of action to key mappings</li>
+</ul>
+<p>Returns:</p>
+<ul>
+<li>Tiler object</li>
+</ul>
+</td>
+              </tr>
+            </table>
+          </section>
+          <section id="chooser">
+            <a name="//apple_ref/cpp/Function/chooser" class="dashAnchor"></a>
+            <h5><a href="#chooser">chooser</a></h5>
+            <table>
+              <tr>
+                <th>Signature</th>
+                <td><code>Tiler:chooser</code></td>
+              </tr>
+              <tr>
+                <th>Type</th>
+                <td>Function</td>
+              </tr>
+              <tr>
+                <th>Description</th>
+                <td><p>Bring up a hs.chooser with a list of windows. Tile the chosen window to the right
+of the currently focused window.</p>
+<p>Parameters:</p>
+<ul>
+<li>None</li>
+</ul>
+<p>Returns:</p>
+<ul>
+<li>Nothing</li>
+</ul>
+</td>
+              </tr>
+            </table>
+          </section>
+          <section id="debug">
+            <a name="//apple_ref/cpp/Function/debug" class="dashAnchor"></a>
+            <h5><a href="#debug">debug</a></h5>
+            <table>
+              <tr>
+                <th>Signature</th>
+                <td><code>Tiler:debug(enable)</code></td>
+              </tr>
+              <tr>
+                <th>Type</th>
+                <td>Function</td>
+              </tr>
+              <tr>
+                <th>Description</th>
+                <td><p>Enable or disable debugging</p>
+<p>Parameters:</p>
+<ul>
+<li>enable - Boolean indicating whether debugging should be on</li>
+</ul>
+<p>Returns:</p>
+<ul>
+<li>Nothing</li>
+</ul>
+</td>
+              </tr>
+            </table>
+          </section>
+          <section id="init">
+            <a name="//apple_ref/cpp/Function/init" class="dashAnchor"></a>
+            <h5><a href="#init">init</a></h5>
+            <table>
+              <tr>
+                <th>Signature</th>
+                <td><code>Tiler:init()</code></td>
+              </tr>
+              <tr>
+                <th>Type</th>
+                <td>Function</td>
+              </tr>
+              <tr>
+                <th>Description</th>
+                <td><p>Initializes a Tiler</p>
+<p>Parameters:</p>
+<ul>
+<li>None</li>
+</ul>
+<p>Returns:</p>
+<ul>
+<li>Tiler object</li>
+</ul>
+</td>
+              </tr>
+            </table>
+          </section>
+          <section id="start">
+            <a name="//apple_ref/cpp/Function/start" class="dashAnchor"></a>
+            <h5><a href="#start">start</a></h5>
+            <table>
+              <tr>
+                <th>Signature</th>
+                <td><code>Tiler:start()</code></td>
+              </tr>
+              <tr>
+                <th>Type</th>
+                <td>Function</td>
+              </tr>
+              <tr>
+                <th>Description</th>
+                <td><p>Start background activity.</p>
+<p>Parameters:</p>
+<ul>
+<li>param - Some parameter</li>
+</ul>
+<p>Returns:</p>
+<ul>
+<li>Tiler object</li>
+</ul>
+</td>
+              </tr>
+            </table>
+          </section>
+          <section id="stop">
+            <a name="//apple_ref/cpp/Function/stop" class="dashAnchor"></a>
+            <h5><a href="#stop">stop</a></h5>
+            <table>
+              <tr>
+                <th>Signature</th>
+                <td><code>Tiler:stop()</code></td>
+              </tr>
+              <tr>
+                <th>Type</th>
+                <td>Function</td>
+              </tr>
+              <tr>
+                <th>Description</th>
+                <td><p>Stop background activity.</p>
+<p>Parameters:</p>
+<ul>
+<li>param - Some parameter</li>
+</ul>
+<p>Returns:</p>
+<ul>
+<li>Tiler object</li>
+</ul>
+</td>
+              </tr>
+            </table>
+          </section>
+  </body>
+</html>

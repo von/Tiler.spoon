@@ -1,0 +1,43 @@
+[
+  {
+    "desc": "Allows choosing a second window to tile next to the focused window.",
+    "name": "Tiler",
+    "type": "Module"
+  },
+  {
+    "desc": "The method accepts a single parameter, which is a table. The keys of the table",
+    "module": "Tiler",
+    "name": "bindHotKeys",
+    "type": "Function"
+  },
+  {
+    "desc": "Bring up a hs.chooser with a list of windows. Tile the chosen window to the right",
+    "module": "Tiler",
+    "name": "chooser",
+    "type": "Function"
+  },
+  {
+    "desc": "Enable or disable debugging",
+    "module": "Tiler",
+    "name": "debug",
+    "type": "Function"
+  },
+  {
+    "desc": "Initializes a Tiler",
+    "module": "Tiler",
+    "name": "init",
+    "type": "Function"
+  },
+  {
+    "desc": "Start background activity.",
+    "module": "Tiler",
+    "name": "start",
+    "type": "Function"
+  },
+  {
+    "desc": "Stop background activity.",
+    "module": "Tiler",
+    "name": "stop",
+    "type": "Function"
+  }
+]
